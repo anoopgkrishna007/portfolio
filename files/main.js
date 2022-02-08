@@ -320,3 +320,9 @@ function initMap() {
 		title: 'We are here!'
 	});
 }
+function _calculateAge(birthday) { // birthday is a date
+	birthday="1986-05-12";
+    var ageDifMs = Date.now() - birthday.getTime();
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+} 

@@ -236,7 +236,7 @@ $(function () {
 
 /* Google Map Options */
 function initMap() {
-	var myLatlng = new google.maps.LatLng(40.773328,-73.960088); // <- Your latitude and longitude
+	var myLatlng = new google.maps.LatLng(9.96812059733818, 76.31296733786554); // <- Your latitude and longitude
 	var styles = [
 	{
 		"featureType": "water",
@@ -312,3 +312,13 @@ function initMap() {
 		title: 'We are here!'
 	});
 }
+
+$(function () { // birthday is a date
+	var birthday=new Date("1986-05-12");
+    var ageDifMs = Date.now() - birthday.getTime();
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    var age= Math.abs(ageDate.getUTCFullYear() - 1970);
+	age=age.toString();
+	$("#age").html(age+' Years');
+
+});
